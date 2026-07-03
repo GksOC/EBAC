@@ -34,8 +34,6 @@ Funcionalidade: Autenticação do Login na plataforma
 
         # Os exemplos servem como biblioteca de dados para o Esquema do Cenário, permitindo a execução de múltiplos testes de login com diferentes 
         # combinações de e-mail e senha. 
-        
-        # "<numeros>" deve ser substituído por um valor exclusivamente numérico para validar o teste.
 
         # "senha_valida", "senha_invalida" e "senha_qualquer" são placeholders para validar os testes de login com diferentes combinações de senha.
         # contando que os campos, como indicam, respeitem as regras de validação do sistema.
@@ -43,28 +41,40 @@ Funcionalidade: Autenticação do Login na plataforma
         # "senha_invalida" deve ser qualquer coisa que não seja a mesma senha do registro do email no banco de dados.
         # "qualquer_senha" permite qualquer coisa como entrada, pois não fará diferença no resultado.
 
-        # "email_valido", "email_invalido", "email_qualquer" e "email_incompleto", "dominio" e "teste" são placeholders que aceitam qualquer entrada,
+        # "email_valido", "email_qualquer", "sufx" e "dom" são placeholders que aceitam qualquer entrada, PORÉM
         # os únicos caracteres especiais permitidos são: . (ponto), - (hífen), _ (underline), + (mais)
         # letras com acento são caracteres especiais e NÃO são permitidos, isso inclui o "ç".
-            | email                             | senha          | resultado                                                                    |
-            | email_valido@dominio              | senha_valida   | O sistema deve autenticar o usuário e redirecioná-lo para a tela de checkout |
-            | email_valido2.teste@dominio       | senha_valida   | O sistema deve autenticar o usuário e redirecioná-lo para a tela de checkout |
-            | email_valido3@dominio.teste       | senha_valida   | O sistema deve autenticar o usuário e redirecioná-lo para a tela de checkout |
-            | email_valido4@<numeros>.dominio   | senha_valida   | O sistema deve autenticar o usuário e redirecioná-lo para a tela de checkout |
-            | email_valido@dominio              | senha_invalida | O sistema deve emitir um aviso de que a senha está incorreta                 |
-            | email_valido2.teste@dominio       | senha_invalida | O sistema deve emitir um aviso de que a senha está incorreta                 |
-            | email_valido3@dominio.teste       | senha_invalida | O sistema deve emitir um aviso de que a senha está incorreta                 |
-            | email_valido4@<numeros>.dominio   | senha_invalida | O sistema deve emitir um aviso de que a senha está incorreta                 |
-            | email_qualquer@dominio            | senha_qualquer | O sistema deve emitir um aviso de que não existe este email cadastrado       |
-            | email_qualquer2@dominio.teste     | senha_qualquer | O sistema deve emitir um aviso de que não existe este email cadastrado       |
-            | email_qualquer3.teste@dominio     | senha_qualquer | O sistema deve emitir um aviso de que não existe este email cadastrado       |
-            | email_qualquer4@<numeros>.dominio | senha_qualquer | O sistema deve emitir um aviso de que não existe este email cadastrado       |
-            | email_incompleto                  | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
-            | @dominio.teste                    | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
-            | email_incompleto@<numeros>        | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
-            | email_qualquer@dominio            |                | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
-            | email_incompleto                  |                | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
-            | @dominio.teste                    |                | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |        
-            |                                   | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        | 
-            |                                   |                | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |  
+
+        # "email_valido" deve ser um e-mail que já esteja registrado no banco de dados, respeitando as regras de negócio sobre os e-mails.
+        # "email_qualquer" deve ser um e-mail que não esteja registrado no banco de dados, respeitando as regras de negócio sobre os e-mails.
+        # "email_invalido" deve conter caracteres especiais que não são permitidos.
+
+        # "dom" e "sufx" NÃO aceitam números.
+        # "dom" sozinho pode ser substituído por "sufx".
+
+        # "numeros" deve ser substituído por um valor exclusivamente numérico para validar o teste.
+            | email                         | senha          | resultado                                                                    |
+            | email_valido@dom              | senha_valida   | O sistema deve autenticar o usuário e redirecioná-lo para a tela de checkout |
+            | email_valido@dom.sufx         | senha_valida   | O sistema deve autenticar o usuário e redirecioná-lo para a tela de checkout |
+            | email_valido@numeros.dom      | senha_valida   | O sistema deve autenticar o usuário e redirecioná-lo para a tela de checkout |
+            | email_valido@dom              | senha_invalida | O sistema deve emitir um aviso de que a senha está incorreta                 |
+            | email_valido@dom.sufx         | senha_invalida | O sistema deve emitir um aviso de que a senha está incorreta                 |
+            | email_valido@numeros.dom      | senha_invalida | O sistema deve emitir um aviso de que a senha está incorreta                 |
+            | email_qualquer@dom            | senha_qualquer | O sistema deve emitir um aviso de que não existe este email cadastrado       |
+            | email_qualquer@dom.sufx       | senha_qualquer | O sistema deve emitir um aviso de que não existe este email cadastrado       |
+            | email_qualquer@numeros.dom    | senha_qualquer | O sistema deve emitir um aviso de que não existe este email cadastrado       |
+            | email_invalido@dom            | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | email_invalido@dom.sufx       | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | email_invalido@numeros.dom    | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | email_qualquer                | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | @dom                          | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | @dom.sufx                     | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | email_qualquer@numeros        | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | email_qualquer@dom.numeros    | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | email_qualquer@dom            |                | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | email_qualquer                |                | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | @dom                          |                | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | @dom.sufx                     |                | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            |                               | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            |                               |                | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
 
