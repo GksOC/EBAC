@@ -59,7 +59,12 @@ Funcionalidade: Autenticação do Login na plataforma
             | email_qualquer2@dominio.teste     | senha_qualquer | O sistema deve emitir um aviso de que não existe este email cadastrado       |
             | email_qualquer3.teste@dominio     | senha_qualquer | O sistema deve emitir um aviso de que não existe este email cadastrado       |
             | email_qualquer4@<numeros>.dominio | senha_qualquer | O sistema deve emitir um aviso de que não existe este email cadastrado       |
-            | email_incompleto                  | senha_qualquer | O sistema deve emitir um aviso de que os campos são inválidos                |
-            | @dominio.teste                    | senha_qualquer | O sistema deve emitir um aviso de que os campos são inválidos                |
-            | email_incompleto@<numeros>        | senha_qualquer | O sistema deve emitir um aviso de que os campos são inválidos                |
+            | email_incompleto                  | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | @dominio.teste                    | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | email_incompleto@<numeros>        | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | email_qualquer@dominio            |                | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | email_incompleto                  |                | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |
+            | @dominio.teste                    |                | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |        
+            |                                   | senha_qualquer | O sistema deve emitir um aviso de que alguns dos campos são inválidos        | 
+            |                                   |                | O sistema deve emitir um aviso de que alguns dos campos são inválidos        |  
 
