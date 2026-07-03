@@ -9,6 +9,9 @@ Funcionalidade: Cadastro de usuário na plataforma para finalização de compra
     # Tambem foi identificado que não há campo de "Senha", portanto o Login deve ser autenticado via e-mail.
     # Verificar com a equipe de QA sobre os pre requisitos de cadastro para finalizar compra
 
+    # Confirmar com a equipe de QA se os demais campos como País, Endereço, Cidade, CEP e Telefone também precisam ser validados
+    # ou se qualquer valor é aceito para estes campos, pois não há regras de validação para eles.
+
     Contexto:
         Dado que o usuário está na página de finalização de compra sem ter realizado login e escolhido a opção de cadastro
 
