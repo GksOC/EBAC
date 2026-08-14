@@ -1,0 +1,81 @@
+[
+    {
+        "nome": "Fábio Araújo",
+        "nota": 9,
+        "curso": "QA"
+    },
+    {
+        "nome": "Alice Souza",
+        "nota": 7,
+        "curso": "SQL",
+        "data-matricula": "2023-01-15"
+    },
+    {
+        "nome": "Carlos Silva",
+        "nota": 8,
+        "curso": ["Python", "Dev"]
+    },
+    {
+        "nome": "Ana Paula",
+        "nota": 9.5,
+        "curso": ["QA", "UI/UX", "MongoDB"],
+        "observação": "Solicitou revisão de nota"
+    },
+    {
+        "nome": "Ferdinando Costa",
+        "nota": 8.5,
+        "curso": ["Dev", "FullStack", "Java"],
+        "Status": "Aprovado"
+    },
+    {
+        "nome": "Henrique Oliveira",
+        "nota": 6,
+        "curso": ["FrontEnd", "UI/UX"]
+    },
+    {
+        "nome": "Karla Mendes",
+        "nota": 10,
+        "curso": "BackEnd"
+    },
+    {
+        "nome": "João Pedro",
+        "nota": 9,
+        "curso": "Inteligência Artificial"
+    },
+    {
+        "nome": "Kevin dos Santos",
+        "nota": 8,
+        "curso": ["Game Design", "Dev"],
+        "Status": "Aprovado"
+    },
+    {
+        "nome": "Guilherme Cantarino",
+        "nota": 10,
+        "curso": ["QA", "Cybersecurity", "Inteligência Artificial"]
+    },
+    {
+        "nome": "Mariana Lima",
+        "nota": 7.5,
+        "curso": ["SQL", "DevOps"]
+    },
+    {
+        "nome": "Rafael Almeida",
+        "nota": 9,
+        "curso": ["FrontEnd", "UI/UX", "React"]
+    },
+    {
+        "nome": "Beatriz Fernandes",
+        "nota": 8.5,
+        "curso": ["BackEnd", "Node.js"]
+    },
+    {
+        "nome": "Lucas Martins",
+        "nota": 6.5,
+        "curso": ["Python", "Data Science"]
+    },
+    {
+        "nome": "Camila Rocha",
+        "nota": 9.2,
+        "curso": ["DevOps", "Cloud Computing"]
+    }
+]

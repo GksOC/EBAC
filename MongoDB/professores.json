@@ -1,0 +1,106 @@
+[
+  {
+    "nome": "Bruno Silveira",
+    "curso": "QA"
+  },
+  {
+    "nome": "Marcos Vinicius",
+    "curso": "Dev"
+  },
+  {
+    "nome": "Maísa Vasconcelos",
+    "curso": "FrontEnd"
+  },
+  {
+    "nome": "Carlos Eduardo Mota",
+    "carga-horaria": 40,
+    "ativo": true,
+    "curso": ["QA", "Testes Automatizados"]
+  },
+  {
+    "nome": "Renata Silveira",
+    "carga-horaria": 30,
+    "ativo": true,
+    "curso": ["SQL", "PostgreSQL", "MongoDB"]
+  },
+  {
+    "nome": "Marcelo Ribeiro",
+    "carga-horaria": 40,
+    "ativo": true,
+    "curso": ["Python", "Data Science", "Machine Learning"]
+  },
+  {
+    "nome": "Fernando Henrique",
+    "carga-horaria": 20,
+    "ativo": true,
+    "curso": ["Dev", "C++"]
+  },
+  {
+    "nome": "Camila Guimarães",
+    "carga-horaria": 32,
+    "ativo": true,
+    "curso": ["UI/UX", "Figma"]
+  },
+  {
+    "nome": "Alexandre Pires",
+    "carga-horaria": 40,
+    "ativo": true,
+    "curso": ["FullStack", "Java", "JavaScript", "Node.js"]
+  },
+  {
+    "nome": "Patricia Abravanel",
+    "carga-horaria": 24,
+    "ativo": true,
+    "curso": ["FrontEnd", "React"]
+  },
+  {
+    "nome": "Roberto Prado",
+    "carga-horaria": 40,
+    "ativo": true,
+    "curso": ["BackEnd", "Docker", "Go"]
+  },
+  {
+    "nome": "Luciana Santos",
+    "carga-horaria": 30,
+    "ativo": true,
+    "curso": ["Inteligência Artificial"]
+  },
+  {
+    "nome": "Gabriel Medina",
+    "carga-horaria": 40,
+    "ativo": true,
+    "curso": ["Game Design", "Unity", "C#", "Game Dev"]
+  },
+  {
+    "nome": "Rodrigo Hilbert",
+    "carga-horaria": 20,
+    "ativo": true,
+    "curso": ["Cybersecurity", "Redes"]
+  },
+  {
+    "nome": "Vanessa da Mata",
+    "carga-horaria": 40,
+    "ativo": true,
+    "curso": ["DevOps", "Cloud Computing", "Kubernetes"]
+  },
+  {
+    "nome": "Thiago Nigro",
+    "carga-horaria": 30,
+    "ativo": true,
+    "curso": ["Mobile", "Flutter", "Dart"]
+  },
+  {
+    "nome": "Beatriz Reis",
+    "carga-horaria": 15,
+    "ativo": false,
+    "curso": ["QA", "SQL"],
+    "observacao": "Professor em licença médica"
+  },
+  {
+    "nome": "Marcos Mion",
+    "carga-horaria": 0,
+    "ativo": false,
+    "curso": ["FrontEnd", "UI/UX"],
+    "observacao": "Desligado da instituição"
+  }
+]
