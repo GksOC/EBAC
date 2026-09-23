@@ -8,3 +8,6 @@ Realizar testes de performance utilizando o arquivo "parameters.csv" como base e
 
 ## Requisitos
 Apache JMeter instalado.
+
+### Comentário
+Fiz tantos teste no Google que as requisições de pesquisa foram todas rejeitadas por "too many requests". Outro motivo que houve um outlier enorme no meio do teste foi provavelmente por causa do modo de baixa energia por inatividade do computador.
