@@ -1,8 +1,10 @@
 ## Organização do diretório
+```
 JS
 ├───Desafio
 ├───aulas
 └───unit-tests
+```
 
 ### Desafio
 Aqui está os critérios para a entrega da tarefa da EBAC
